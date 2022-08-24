@@ -1,6 +1,10 @@
-# Update: Added optimized_img2img.py
+# Update: Added support for specifying image seed
 
-This code can now generate a 512x512 image from prior images using less than 4Gb of RAM (in less than 20 seconds on RTX 2060)
+- The code will now give the seed number along with each generated image. To generate the same image again, just specify the seed using `--seed` argument. Also, images will be saved with its seed number as its name.
+
+- eg. If the seed number for an image is `1234` and it's the 55th image in the folder, the image name will be named `seed_1234_00055.png`
+
+- If generating multiple images at once, the seed value will be incremented by 1 after each image generation. Also. if no seed is given as an argument, a random initial seed will be choosen.
 
 # Optimized Stable Diffusion (Sort of)
 
